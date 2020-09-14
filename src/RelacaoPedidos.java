@@ -2,7 +2,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ public class RelacaoPedidos
         this.pedidos.add(pedido);
         SimpleDateFormat formatted_date = new SimpleDateFormat("yyyy-mm-dd-HH-mm");
         String date = formatted_date.format(new Date()).replace(' ','-');
-        FileWriter pedido_writer = new FileWriter(".\\pedidos\\mesa-"+pedido.getNumeroMesa()+"-data-"+date+".txt", true);
+        FileWriter pedido_writer = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\pedidos\\mesa-"+pedido.getNumeroMesa()+"-data-"+date+".txt", true);
         PrintWriter gravador = new PrintWriter(pedido_writer);
         gravador.println("----------------------COMANDA---------------------");        
         gravador.println("Cliente: " + pedido.getNomeCliente());        

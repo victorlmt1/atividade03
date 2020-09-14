@@ -24,7 +24,7 @@ public class Cardapio {
         lista_bebidas.clear();
         lista_vinhos.clear();   
         //PRATOS     
-        File pratos = new File(".\\data_sources\\pratos.csv");
+        File pratos = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\pratos.csv");
         Scanner leitor_pratos = new Scanner(new FileInputStream(pratos));
                 
         while (leitor_pratos.hasNext()) {
@@ -35,7 +35,7 @@ public class Cardapio {
         }
 
         //BEBIDAS     
-        File bebidas = new File(".\\data_sources\\bebidas-tabuladas.txt");
+        File bebidas = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\bebidas-tabuladas.txt");
         Scanner leitor_bebidas = new Scanner(new FileInputStream(bebidas));
                 
         while (leitor_bebidas.hasNext()) {
@@ -45,7 +45,7 @@ public class Cardapio {
             lista_bebidas.add(new Item(id, partes[1], Double.parseDouble(partes[0].replaceAll(",","."))));
         }
         //VINHOS     
-        File vinhos = new File(".\\data_sources\\vinhos-tabulados.txt");
+        File vinhos = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\vinhos-tabulados.txt");
         Scanner leitor_vinhos = new Scanner(new FileInputStream(vinhos));
                 
         while (leitor_vinhos.hasNext()) {
@@ -81,7 +81,7 @@ public class Cardapio {
     }
 
     void adicionarPrato(String name, double price) throws IOException {
-        FileWriter pratos = new FileWriter(".\\data_sources\\pratos.csv", true);
+        FileWriter pratos = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\pratos.csv", true);
         PrintWriter gravador = new PrintWriter(pratos);
         gravador.println(name + ';' + price);
         gravador.close();
@@ -93,10 +93,10 @@ public class Cardapio {
     }
 
     void removerPrato(String prato_to_remove) throws IOException {        
-        File pratos = new File(".\\data_sources\\pratos.csv");
-        File pratos_leitura_temp = new File(".\\data_sources\\pratos_temp.csv");        
+        File pratos = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\pratos.csv");
+        File pratos_leitura_temp = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\pratos_temp.csv");        
         Scanner leitor_pratos = new Scanner(new FileInputStream(pratos));
-        FileWriter pratos_temp = new FileWriter(".\\data_sources\\pratos_temp.csv", true);
+        FileWriter pratos_temp = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\pratos_temp.csv", true);
         PrintWriter gravador = new PrintWriter(pratos_temp);
                 
         while (leitor_pratos.hasNext()) {
@@ -119,7 +119,7 @@ public class Cardapio {
     }
 
     void adicionarBebida(String name, double price) throws IOException {
-        FileWriter bebidas = new FileWriter(".\\data_sources\\bebidas-tabuladas.txt", true);
+        FileWriter bebidas = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\bebidas-tabuladas.txt", true);
         PrintWriter gravador = new PrintWriter(bebidas);
         gravador.println(price + "\t" + name);
         gravador.close();
@@ -131,10 +131,10 @@ public class Cardapio {
     }
 
     void removerBebida(String bebida_to_remove) throws IOException {        
-        File bebidas = new File(".\\data_sources\\bebidas-tabuladas.txt");
-        File bebidas_leitura_temp = new File(".\\data_sources\\bebidas-tabuladas-temp.txt");        
+        File bebidas = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\bebidas-tabuladas.txt");
+        File bebidas_leitura_temp = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\bebidas-tabuladas-temp.txt");        
         Scanner leitor_bebidas = new Scanner(new FileInputStream(bebidas));
-        FileWriter bebidas_temp = new FileWriter(".\\data_sources\\bebidas-tabuladas-temp.txt", true);
+        FileWriter bebidas_temp = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\bebidas-tabuladas-temp.txt", true);
         PrintWriter gravador = new PrintWriter(bebidas_temp);
                 
         while (leitor_bebidas.hasNext()) {
@@ -157,7 +157,7 @@ public class Cardapio {
     }
 
     void adicionarVinho(String name, double price) throws IOException {
-        FileWriter vinhos = new FileWriter(".\\data_sources\\vinhos-tabulados.txt", true);
+        FileWriter vinhos = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\vinhos-tabulados.txt", true);
         PrintWriter gravador = new PrintWriter(vinhos);
         gravador.println(price + "\t" + name);
         gravador.close();
@@ -169,10 +169,10 @@ public class Cardapio {
     }
 
     void removerVinho(String vinho_to_remove) throws IOException {        
-        File vinhos = new File(".\\data_sources\\vinhos-tabulados.txt");
-        File vinhos_leitura_temp = new File(".\\data_sources\\vinhos-tabulados-temp.txt");        
+        File vinhos = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\vinhos-tabulados.txt");
+        File vinhos_leitura_temp = new File("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\vinhos-tabulados-temp.txt");        
         Scanner leitor_vinhos = new Scanner(new FileInputStream(vinhos));
-        FileWriter vinhos_temp = new FileWriter(".\\data_sources\\vinhos-tabulados-temp.txt", true);
+        FileWriter vinhos_temp = new FileWriter("C:\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\data_sources\\vinhos-tabulados-temp.txt", true);
         PrintWriter gravador = new PrintWriter(vinhos_temp);
                 
         while (leitor_vinhos.hasNext()) {
