@@ -1,10 +1,8 @@
-3,70	√?gua mineral
-3,00	√?gua mineral sem g√°s
-5,00	√?gua-de-coco
-7,60	Coca-Cola
-6,50	Fanta Laranja
-6,50	Fanta Uva
-5,50	Guaran√°
-4,50	Limonada
-4,70	Sprite
-35.0	Agua com gelo e limao
+Agua mineral	3.7
+Agua mineral sem g√°s	3.0
+Agua-de-coco	5.0
+Coca-Cola	7.6
+Fanta Laranja	6.5
+Guaran√°	5.5
+Limonada	4.5
+Sprite	4.7

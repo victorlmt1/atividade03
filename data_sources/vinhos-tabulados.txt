@@ -1,13 +1,12 @@
-25.50	Cabernet Sauvignon
-27.45	Cabernet Franc
-33.00	Tannat Uruguaio
-45.50	Merlot Francês
-35.00	Malbec Argentino
-47.77	Pinot Noir
-54.00	Riesling Itálico
-38.10	Chardonnay Americano
-57.00	Gewurztraminer
-39.90	Semillón
-46.90	Sauvignon Blanc
-39.00	Barbera Italiana
-15.9	Campo Largo, do mais barato
+Cabernet Sauvignon	25.5
+Cabernet Franc	27.45
+Tannat Uruguaio	33.0
+Merlot Francês	45.5
+Malbec Argentino	35.0
+Pinot Noir	47.77
+Riesling Itálico	54.0
+Chardonnay Americano	38.1
+Gewurztraminer	57.0
+Semillón	39.9
+Sauvignon Blanc	46.9
+Barbera Italiana	56.0
