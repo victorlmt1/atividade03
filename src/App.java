@@ -115,8 +115,8 @@ public class App {
                 case 4:
                     System.out.println("Digite o nome ID do pedido que deseja recuperar:");
                     scan.nextLine();
-                    String id = scan.nextLine();
-                    Pedido pedido_recuperado = new Pedido(id, cardapio);
+                    final String id = scan.nextLine();
+                    final Pedido pedido_recuperado = new Pedido(id, cardapio);
                     do {
                         System.out.println("--------------------------------------------------");
                         System.out.println("Digite a opção desejada:");

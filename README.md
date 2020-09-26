@@ -27,15 +27,12 @@ com que cada classe processe apenas algoritmos pertinentes a ela;
 dia 27/09/2020 e a URL publicada no portal até as 23h59min desse dia.
 """
 
-CONFIGURATION
-Please insert this project root folder path into Arquivo.java class inside the src folder changing this line:
 
-        private String _path = "C:\\Users\\Victor\\iCloudDrive\\engenharia-projetos\\desenvolvimento-de-software\\atividades\\java-menu-system\\";
-        private String _path = "Your project root folder";
-
-After that compile all the classes using javac and put the .class files inside bin folder.
 
 RUNNING
+
+Delete all files inside bin folder.
+Compile all the classes using javac and put the .class files inside bin folder.
 To run the program you`ll need to navigate to bin folder and run the following command: 
     Java App
 

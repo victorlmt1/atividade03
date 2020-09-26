@@ -1,0 +1,5 @@
+Cliente:Victor Tavares
+Mesa:33
+Total:15.0
+Arroz de forno:7.5:Frito
+Arroz de forno:7.5:Frito

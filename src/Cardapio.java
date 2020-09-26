@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Cardapio {
 
-    Arquivo pratos = new Arquivo("data_sources\\pratos.csv", ";");
-    Arquivo bebidas = new Arquivo("data_sources\\bebidas-tabuladas.txt", "\t");
-    Arquivo vinhos = new Arquivo("data_sources\\vinhos-tabulados.txt", "\t");
+    Arquivo pratos = new Arquivo("\\data_sources\\pratos.csv", ";");
+    Arquivo bebidas = new Arquivo("\\data_sources\\bebidas-tabuladas.txt", "\t");
+    Arquivo vinhos = new Arquivo("\\data_sources\\vinhos-tabulados.txt", "\t");
 
     List<Item> lista_vinhos = new ArrayList<Item>();
     List<Item> lista_pratos = new ArrayList<Item>();
@@ -82,33 +82,33 @@ public class Cardapio {
 
     void removerPrato() throws IOException { 
         String nome;
-        List<Item> itens_encontrados = new ArrayList<Item>();
-        while(true){
-            itens_encontrados.clear();            
+        final List<Item> itens_encontrados = new ArrayList<Item>();
+        while (true) {
+            itens_encontrados.clear();
             System.out.println("--------------------------------------------------");
             System.out.println("Digite o nome do prato a ser removido:");
             nome = scan.nextLine();
-            for(Item item : lista_pratos){
-                if(item.getNome().toLowerCase().contains(nome.toLowerCase())){
+            for (final Item item : lista_pratos) {
+                if (item.getNome().toLowerCase().contains(nome.toLowerCase())) {
                     itens_encontrados.add(item);
                 }
             }
-            if(itens_encontrados.size() == 0){
+            if (itens_encontrados.size() == 0) {
                 System.out.println("Nenhum prato com nome " + nome + " encontrado!");
                 break;
             }
-            if(itens_encontrados.size() == 1){
-                Item item_encontrado = itens_encontrados.get(0);
+            if (itens_encontrados.size() == 1) {
+                final Item item_encontrado = itens_encontrados.get(0);
                 System.out.println("Removendo o prato: " + item_encontrado.getNome() + "!");
-                lista_pratos.remove(item_encontrado);                
+                lista_pratos.remove(item_encontrado);
                 System.out.println("--------------------------------------------------");
                 System.out.println("Prato removido com sucesso.");
                 System.out.println("--------------------------------------------------");
                 break;
             }
-            if(itens_encontrados.size() > 1){
-                for(Item item_encontrado : itens_encontrados){
-                    System.out.println("O sistema encontrou: "+ item_encontrado.getNome());
+            if (itens_encontrados.size() > 1) {
+                for (final Item item_encontrado : itens_encontrados) {
+                    System.out.println("O sistema encontrou: " + item_encontrado.getNome());
                 }
             }
         }
@@ -122,7 +122,7 @@ public class Cardapio {
         System.out.println("--------------------------------------------------");
         System.out.println("Digite o nome da bebida a ser adicionada:");
         nome_bebida = scan.nextLine();
-        System.out.println("Digite o preço de "+ nome_bebida +" em Reais:");
+        System.out.println("Digite o preço de " + nome_bebida + " em Reais:");
         preco_bebida = scan.nextLine();
         lista_bebidas.add(new Item(nome_bebida, preco_bebida));
         bebidas.escreverArquivo(lista_bebidas);
@@ -134,33 +134,33 @@ public class Cardapio {
 
     void removerBebida() throws IOException {
         String nome = null;
-        List<Item> itens_encontrados = new ArrayList<Item>();
-        while(true){
-            itens_encontrados.clear();            
+        final List<Item> itens_encontrados = new ArrayList<Item>();
+        while (true) {
+            itens_encontrados.clear();
             System.out.println("--------------------------------------------------");
             System.out.println("Digite o nome da bebida a ser removida:");
             nome = scan.nextLine();
-            for(Item item : lista_bebidas){
-                if(item.getNome().toLowerCase().contains(nome.toLowerCase())){
+            for (final Item item : lista_bebidas) {
+                if (item.getNome().toLowerCase().contains(nome.toLowerCase())) {
                     itens_encontrados.add(item);
                 }
             }
-            if(itens_encontrados.size() == 0){
+            if (itens_encontrados.size() == 0) {
                 System.out.println("Nenhuma bebida com nome " + nome + " encontrada!");
                 break;
             }
-            if(itens_encontrados.size() == 1){
-                Item item_encontrado = itens_encontrados.get(0);
+            if (itens_encontrados.size() == 1) {
+                final Item item_encontrado = itens_encontrados.get(0);
                 System.out.println("Removendo a bebida: " + item_encontrado.getNome() + "!");
-                lista_bebidas.remove(item_encontrado);                
+                lista_bebidas.remove(item_encontrado);
                 System.out.println("--------------------------------------------------");
                 System.out.println("Bebida removida com sucesso.");
                 System.out.println("--------------------------------------------------");
                 break;
             }
-            if(itens_encontrados.size() > 1){
-                for(Item item_encontrado : itens_encontrados){
-                    System.out.println("O sistema encontrou: "+ item_encontrado.getNome());
+            if (itens_encontrados.size() > 1) {
+                for (final Item item_encontrado : itens_encontrados) {
+                    System.out.println("O sistema encontrou: " + item_encontrado.getNome());
                 }
             }
         }
@@ -174,7 +174,7 @@ public class Cardapio {
         System.out.println("--------------------------------------------------");
         System.out.println("Digite o nome do vinho a ser adicionado:");
         nome_vinho = scan.nextLine();
-        System.out.println("Digite o preço de "+ nome_vinho +" em Reais:");
+        System.out.println("Digite o preço de " + nome_vinho + " em Reais:");
         preco_vinho = scan.nextLine();
         lista_vinhos.add(new Item(nome_vinho, preco_vinho));
         vinhos.escreverArquivo(lista_vinhos);
@@ -186,32 +186,32 @@ public class Cardapio {
 
     void removerVinho() throws IOException {
         String nome = null;
-        List<Item> itens_encontrados = new ArrayList<Item>();
-        while(true){
-            itens_encontrados.clear();            
+        final List<Item> itens_encontrados = new ArrayList<Item>();
+        while (true) {
+            itens_encontrados.clear();
             System.out.println("--------------------------------------------------");
             System.out.println("Digite o nome do vinho a ser removido:");
             nome = scan.nextLine();
-            for(Item item : lista_vinhos){
-                if(item.getNome().toLowerCase().contains(nome.toLowerCase())){
+            for (final Item item : lista_vinhos) {
+                if (item.getNome().toLowerCase().contains(nome.toLowerCase())) {
                     itens_encontrados.add(item);
                 }
             }
-            if(itens_encontrados.size() == 0){
+            if (itens_encontrados.size() == 0) {
                 System.out.println("Nenhum vinho com nome " + nome + " encontrado!");
                 break;
             }
-            if(itens_encontrados.size() == 1){
-                Item item_encontrado = itens_encontrados.get(0);
+            if (itens_encontrados.size() == 1) {
+                final Item item_encontrado = itens_encontrados.get(0);
                 System.out.println("Removendo o vinho: " + item_encontrado.getNome() + "!");
-                lista_vinhos.remove(item_encontrado);                
+                lista_vinhos.remove(item_encontrado);
                 System.out.println("--------------------------------------------------");
                 System.out.println("Vinho removido com sucesso.");
                 System.out.println("--------------------------------------------------");
                 break;
             }
-            if(itens_encontrados.size() > 1){
-                for(Item item_encontrado : itens_encontrados){
+            if (itens_encontrados.size() > 1) {
+                for (final Item item_encontrado : itens_encontrados) {
                     System.out.println("O sistema encontrou: "+ item_encontrado.getNome());
                 }
             }
